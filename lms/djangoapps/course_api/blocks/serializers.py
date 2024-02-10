@@ -164,7 +164,7 @@ class BlockSerializer(serializers.Serializer):  # pylint: disable=abstract-metho
             ),
         }
 
-        if settings.FEATURES.get("ENABLE_LTI_PROVIDER") and 'lti_url' in self.context['requested_fields']:
+        if 'lti_url' in self.context['requested_fields']:
             data['lti_url'] = reverse(
                 'lti_provider_launch',
                 kwargs={'course_id': str(block_key.course_key), 'usage_id': str(block_key)},

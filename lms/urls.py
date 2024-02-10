@@ -901,10 +901,10 @@ if settings.FEATURES.get('CUSTOM_COURSES_EDX'):
     ]
 
 # Access to courseware as an LTI provider
-if settings.FEATURES.get('ENABLE_LTI_PROVIDER'):
-    urlpatterns += [
-        path('lti_provider/', include('lms.djangoapps.lti_provider.urls')),
-    ]
+# if settings.FEATURES.get('ENABLE_LTI_PROVIDER'):
+urlpatterns += [
+    path('lti_provider/', include('lms.djangoapps.lti_provider.urls')),
+]
 
 urlpatterns += [
     path('config/programs', ConfigurationModelCurrentAPIView.as_view(model=ProgramsApiConfig)),

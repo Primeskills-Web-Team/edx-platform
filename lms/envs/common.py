@@ -711,7 +711,7 @@ FEATURES = {
     # .. toggle_use_cases: open_edx
     # .. toggle_creation_date: 2015-04-24
     # .. toggle_tickets: https://github.com/openedx/edx-platform/pull/7689
-    'ENABLE_LTI_PROVIDER': False,
+    'ENABLE_LTI_PROVIDER': True,
 
     # .. toggle_name: FEATURES['SHOW_HEADER_LANGUAGE_SELECTOR']
     # .. toggle_implementation: DjangoSetting
